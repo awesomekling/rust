@@ -75,6 +75,7 @@ mod msvc_base;
 mod netbsd_base;
 mod openbsd_base;
 mod redox_base;
+mod serenity_base;
 mod solaris_base;
 mod solid_base;
 mod thumb_base;
@@ -1025,6 +1026,8 @@ supported_targets! {
     ("x86_64-unknown-none", x86_64_unknown_none),
 
     ("mips64-openwrt-linux-musl", mips64_openwrt_linux_musl),
+
+    ("x86_64-unknown-serenity", x86_64_unknown_serenity),
 }
 
 /// Cow-Vec-Str: Cow<'static, [Cow<'static, str>]>

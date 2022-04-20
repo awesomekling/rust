@@ -137,6 +137,8 @@ pub mod netbsd;
 pub mod openbsd;
 #[cfg(target_os = "redox")]
 pub mod redox;
+#[cfg(target_os = "serenity")]
+pub mod serenity;
 #[cfg(target_os = "solaris")]
 pub mod solaris;
 

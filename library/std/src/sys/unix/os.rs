@@ -350,7 +350,7 @@ pub fn current_exe() -> io::Result<PathBuf> {
     }
 }
 
-#[cfg(any(target_os = "linux", target_os = "android", target_os = "emscripten"))]
+#[cfg(any(target_os = "linux", target_os = "android", target_os = "emscripten", target_os = "serenity"))]
 pub fn current_exe() -> io::Result<PathBuf> {
     match crate::fs::read_link("/proc/self/exe") {
         Err(ref e) if e.kind() == io::ErrorKind::NotFound => Err(io::const_io_error!(
@@ -581,6 +581,7 @@ pub fn home_dir() -> Option<PathBuf> {
         target_os = "emscripten",
         target_os = "redox",
         target_os = "vxworks",
+        target_os = "serenity",
         target_os = "espidf"
     ))]
     unsafe fn fallback() -> Option<OsString> {
@@ -592,6 +593,7 @@ pub fn home_dir() -> Option<PathBuf> {
         target_os = "emscripten",
         target_os = "redox",
         target_os = "vxworks",
+        target_os = "serenity",
         target_os = "espidf"
     )))]
     unsafe fn fallback() -> Option<OsString> {
