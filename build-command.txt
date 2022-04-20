@@ -1,0 +1,1 @@
+DESTDIR=/path/to/install/this/in ./x.py install -i --stage 1 --target x86_64-unknown-serenity compiler/rustc library/std
