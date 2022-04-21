@@ -78,7 +78,7 @@ changelog-seen = 2
 #plugins = false
 
 # Indicates whether ccache is used when building LLVM
-#ccache = false
+ccache = true
 # or alternatively ...
 #ccache = "/path/to/ccache"
 
@@ -629,7 +629,7 @@ incremental = true
 # Each of the following options is scoped to the specific target triple in
 # question and is used for determining how to compile each target.
 # =============================================================================
-[target.x86_64-unknown-linux-gnu]
+[target.x86_64-unknown-serenity]
 
 # C compiler to be used to compile C code. Note that the
 # default value is platform specific, and if not specified it may also depend on

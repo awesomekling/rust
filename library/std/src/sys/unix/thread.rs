@@ -132,10 +132,17 @@ impl Thread {
         }
     }
 
-    #[cfg(any(target_os = "freebsd", target_os = "dragonfly", target_os = "openbsd", target_os = "serenity"))]
+    #[cfg(any(target_os = "freebsd", target_os = "dragonfly", target_os = "openbsd"))]
     pub fn set_name(name: &CStr) {
         unsafe {
             libc::pthread_set_name_np(libc::pthread_self(), name.as_ptr());
+        }
+    }
+
+    #[cfg(target_os = "serenity")]
+    pub fn set_name(name: &CStr) {
+        unsafe {
+            libc::pthread_setname_np(libc::pthread_self(), name.as_ptr());
         }
     }
 
