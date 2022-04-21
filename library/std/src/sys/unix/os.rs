@@ -45,6 +45,7 @@ extern "C" {
             target_os = "linux",
             target_os = "emscripten",
             target_os = "fuchsia",
+            target_os = "serenity",
             target_os = "l4re"
         ),
         link_name = "__errno_location"
