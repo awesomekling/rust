@@ -125,7 +125,7 @@ rustfmt-nightly = { path = "src/tools/rustfmt" }
 # See comments in `src/tools/rustc-workspace-hack/README.md` for what's going on
 # here
 rustc-workspace-hack = { path = 'src/tools/rustc-workspace-hack' }
-libc = { git = "ssh://git@github.com/awesomekling/rust-libc.git", rev = "9a96622c7b3b6265632cb1f93d2b5d9811b86dfe" }
+libc = { git = "ssh://git@github.com/awesomekling/rust-libc.git", rev = "b177609741e11ad873e00d4afcb946ca651a0987" }
 
 # See comments in `library/rustc-std-workspace-core/README.md` for what's going on
 # here
