@@ -19,6 +19,7 @@ pub fn hashmap_random_keys() -> (u64, u64) {
     not(target_os = "netbsd"),
     not(target_os = "fuchsia"),
     not(target_os = "redox"),
+    not(target_os = "serenity"),
     not(target_os = "vxworks")
 ))]
 mod imp {
@@ -145,6 +146,15 @@ mod imp {
         // for older macos which doesn't support getentropy
         let mut file = File::open("/dev/urandom").expect("failed to open /dev/urandom");
         file.read_exact(v).expect("failed to read /dev/urandom")
+    }
+}
+
+#[cfg(target_os = "serenity")]
+mod imp {
+    pub fn fill_bytes(v: &mut [u8]) {
+        for s in v.chunks_mut(4096) {
+            unsafe { libc::arc4random_buf(s.as_mut_ptr() as *mut libc::c_void, s.len()) };
+        }
     }
 }
 

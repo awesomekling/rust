@@ -2062,7 +2062,7 @@ checksum = "830d08ce1d1d941e6b30645f1a0eb5643013d835ce3779a5fc208261dbe10f55"
 [[package]]
 name = "libc"
 version = "0.2.124"
-source = "git+ssh://git@github.com/awesomekling/rust-libc.git?branch=master#36ac987b7bce57a7f754c58fb8e91ccceb097d1a"
+source = "git+ssh://git@github.com/awesomekling/rust-libc.git?branch=master#874475c1696d6235b35ca1965e2f586de9543bf9"
 dependencies = [
  "rustc-std-workspace-core",
 ]
