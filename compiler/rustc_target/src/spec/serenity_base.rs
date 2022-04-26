@@ -1,4 +1,4 @@
-use crate::spec::{cvs, PanicStrategy, RelroLevel, TargetOptions, TlsModel};
+use crate::spec::{cvs, FramePointer, PanicStrategy, RelroLevel, TargetOptions, TlsModel};
 
 pub fn opts() -> TargetOptions {
     TargetOptions {
