@@ -10,6 +10,7 @@ pub fn opts() -> TargetOptions {
         panic_strategy: PanicStrategy::Abort,
         families: cvs!["unix"],
         relro_level: RelroLevel::Full,
+        frame_pointer: FramePointer::Always,
         ..Default::default()
     }
 }
